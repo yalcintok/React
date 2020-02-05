@@ -3,6 +3,7 @@ import React from 'react'
 export default function City({city, removeCity}) {
     return (
         <div>
+            <a href={'/' + city.id}>Open</a>
             <button onClick={() => {removeCity(city.id)}}>X</button>
             <p>{city.name}, {city.sys.country}</p>
             <p>{city.weather[0].main}</p>
