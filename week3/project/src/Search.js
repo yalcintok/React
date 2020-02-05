@@ -5,7 +5,7 @@ export default function Search({setCities, setLoading, setError}) {
     function getWeatherInfo () {
         setLoading(true);
         setError(false);
-        const URL = `http://api.openweathermap.org/data/2.5/weather?appid=${process.env.REACT_APP_OPENWEATHERMAP_API_KEY}&q=`; 
+        const URL = `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.REACT_APP_OPENWEATHERMAP_API_KEY}&q=`; 
         fetch(URL + cityName)
             .then(res => {
                 if(res.ok) {
